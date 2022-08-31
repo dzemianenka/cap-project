@@ -11,6 +11,8 @@ modules:
     path: srv
     properties:
       SPRING_PROFILES_ACTIVE: cloud
+      JBP_CONFIG_SAP_MACHINE_JRE: "{ jre: { version: 11.+ } }"                       # Prop for using java 11. For java 8 not necessary
+      JBP_CONFIG_COMPONENTS: "jres: [com.sap.xs.java.buildpack.jdk.SAPMachineJDK]"   # Prop for using java 11. For java 8 not necessary
     parameters:
       buildpack: sap_java_buildpack
     build-parameters:
